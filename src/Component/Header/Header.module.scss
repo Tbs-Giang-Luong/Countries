@@ -1,0 +1,88 @@
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 94%;
+	height: 68px;
+	margin: 0 auto;
+	padding: 0 30px;
+
+	background-color: rgb(132, 165, 198);
+	border: 2px solid #ddd;
+	box-shadow: var(--box-shadow);
+
+	.logo {
+		font-size: 2rem;
+		font-weight: 600;
+		color: var(--white);
+		text-align: center;
+		align-items: center;
+		margin: auto 0;
+		padding: 2px 2px;
+		box-shadow: var(--box-shadow);
+	}
+
+	.toggle-button {
+		display: flex;
+		flex-direction: row;
+		padding: 2px 4px;
+		align-items: center;
+		justify-content: space-between;
+		height: 30px;
+		min-width: 66px;
+		border: 1px solid orange;
+		// line-height: 68px;
+		border-radius: 999px;
+		margin-top: 12px;
+		box-shadow: 0 1px 3px #ccc;
+
+		.inputCheck {
+			width: 0;
+			height: 0;
+			opacity: 0;
+		}
+
+		.icon {
+			// display: block;
+			font-size: 2.6rem;
+			transition: all linear 0.5s;
+			align-items: center;
+			justify-content: center;
+			line-height: 20px;
+			color: yellow;
+		}
+
+		.circle {
+			display: block;
+			width: 26px;
+			height: 26px;
+			margin-right: 2px;
+			background-color: #000;
+			transition: all linear 0.5s;
+
+			border-radius: 50%;
+		}
+
+		.inputCheck:checked ~ .icon {
+			transform: translateX(34px);
+			-webkit-transform: translateX(34px);
+			-ms-transform: translateX(34px);
+		}
+
+		.inputCheck:checked ~ .circle {
+			transform: translateX(-34px);
+
+			-webkit-transform: translateX(-34px);
+			-ms-transform: translateX(-34px);
+		}
+	}
+}
+
+.dark {
+	color: aliceblue;
+	background-color: #444;
+}
+
+.light {
+	background-color: rgb(132, 165, 198);
+}

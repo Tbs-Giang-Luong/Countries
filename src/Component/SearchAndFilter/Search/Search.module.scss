@@ -1,0 +1,40 @@
+//Search
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.search-title {
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: #444;
+	// margin: 10px;
+}
+.wrapper-input {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+
+	.search-input {
+		height: 24px;
+		min-width: 220px;
+		box-shadow: var(--box-shadow);
+		border: 1px solid #aaa;
+	}
+	.icon {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		font-size: 2.2rem;
+		background-color: #ddd;
+		display: block;
+		width: max-content;
+		height: 28px;
+
+		&:hover {
+			cursor: pointer;
+			opacity: 0.8;
+		}
+	}
+}

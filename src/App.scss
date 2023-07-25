@@ -1,0 +1,16 @@
+.app {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	// overflow-x: scroll;
+}
+.app-header {
+	width: 100%;
+}
+.div-container {
+	display: flex;
+	flex-direction: column;
+	width: 1920px;
+	align-items: center;
+	margin: 0 auto;
+}
