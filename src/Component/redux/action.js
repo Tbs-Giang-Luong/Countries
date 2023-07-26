@@ -1,19 +1,14 @@
-import axios from "axios";
+import axios from 'axios';
 
-const getAllCountries = async () => {
+export const getAllCountries = () => {
+	return (dispatch) => {
+		axios.get('https://restcountries.com/v3.1/all').then((res) => {
+			dispatch({
+				type: 'getAllCountries',
+				payload: res.data,
+			});
+		});
+	};
+};
 
-    try {
-        const res = await axios.get("https://restcountries.com/v3.1/all")
-        const data = await res.data
-        return ({
-            type: "getAllCountries",
-            payload: data
-
-        })
-    } catch (error) {
-        console.log(error)
-    }
-
-}
-
-export default getAllCountries
+export default getAllCountries;
